@@ -11,6 +11,14 @@ class EmailsController < ApplicationController
     end
   end
 
+  def destroy
+    print "trololol"
+    @email.destroy
+    respond_to do |format|
+      format.json { render json: "\"ok\":\"yep\""}
+    end
+  end
+
   private
 
     # Never trust parameters from the scary internet, only allow the white list through.
